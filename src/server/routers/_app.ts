@@ -12,6 +12,7 @@ import { tokensRouter } from "./tokens";
 import { userRouter } from "./user";
 import { whitelistRouter } from "./whitelist";
 import { xerberusRouter } from "./xerberus";
+import { testRouter } from "./test";
 
 /**
  * This is the primary router for the server.
@@ -32,6 +33,7 @@ export const appRouter = createTRPCRouter({
   tokens: tokensRouter,
   xerberus: xerberusRouter,
   sync: syncRouter,
+  test: testRouter
 });
 
 // export type definition of API
