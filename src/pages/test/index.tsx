@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, TextField, Button, List, ListItem } from "@mui/material";
+import { Box, TextField, Button, List, ListItem, Typography } from "@mui/material";
 import { trpc } from '@lib/utils/trpc'; 
 
 const Test = () => {
@@ -17,7 +17,7 @@ const Test = () => {
   };
 
   return (
-    <Box>
+    <Box sx={{ paddingTop: '30px', mx: '30%' }}>
       <form onSubmit={handleSubmit}>
         <TextField
           label="Name"
@@ -30,6 +30,7 @@ const Test = () => {
           Submit
         </Button>
       </form>
+      <Typography variant='h4' sx={{ mt: 2 }}>List of Names</Typography>
       <List>
         {data?.map((item) => (
           <ListItem key={item.id}>{item.name}</ListItem>
